@@ -5,7 +5,6 @@ const verificaParametroId = async (req, res, next) => {
       return res.status(400).json({ mensagem: "Id informado inválido" });
     }
     next();
-  };  
- 
-  
+  };
+   
   module.exports = verificaParametroId;
