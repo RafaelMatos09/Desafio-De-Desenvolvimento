@@ -1,11 +1,19 @@
+const { format } = require("date-fns");
 const knex = require("../conexao");
 
 const listar = async (req, res) => {
     
     try {
-        const usuario = await knex("usuarios").returning("*");
+        const usuarios = await knex("usuarios").returning("*");
 
-        return res.status(200).json(usuario);        
+        const usuariosFormatados = usuarios.map(usuario => {
+            return {
+                ...usuario,
+                data_nascimento: format(new Date(usuario.data_nascimento), 'yyyy-MM-dd')
+            };
+        });
+
+        return res.status(200).json(usuariosFormatados);        
     } catch (error) {        
         return res.status(500).json({ mensagem: "Erro interno do Servidor!"});
     }

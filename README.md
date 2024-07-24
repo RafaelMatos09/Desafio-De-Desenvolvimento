@@ -50,4 +50,5 @@
     <li><strong>dotenv:</strong> Carrega variáveis de ambiente a partir de um arquivo <code>.env</code>.</li>
     <li><strong>joi:</strong> Biblioteca para validação de dados e esquemas em JavaScript.</li>
     <li><strong>nodemon:</strong> Ferramenta que reinicia automaticamente o servidor Node.js quando arquivos são alterados.</li>
+    <li><strong>date-fns:</strong> Biblioteca para manipulação e formatação de datas em JavaScript.</li>
 </ul>
